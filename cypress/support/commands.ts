@@ -1,3 +1,13 @@
+declare namespace Cypress {
+  interface Chainable<Subject = any> {
+    customCommand(param: any): typeof customCommand;
+  }
+}
+
+function customCommand(param: any): void {
+  console.warn(param);
+}
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -24,6 +34,4 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('customCommand', (param) => {
-  console.warn(param);
-});
+Cypress.Commands.add('customCommand', customCommand);
