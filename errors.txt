@@ -7,3 +7,10 @@ Error: Webpack Compilation Error
 /Users/taylor/Dev/Minimally-Reproducible/cypress-typescript-custom-commands/cypress/support/index.ts
 [tsl] ERROR in /Users/taylor/Dev/Minimally-Reproducible/cypress-typescript-custom-commands/cypress/support/index.ts(17,27)
       TS2306: File '/Users/taylor/Dev/Minimally-Reproducible/cypress-typescript-custom-commands/cypress/support/commands.ts' is not a module.
+
+### AFTER IMPORT CHANGE IN `support/index.ts`
+Error: Webpack Compilation Error
+/Users/taylor/Dev/Minimally-Reproducible/cypress-typescript-custom-commands/cypress/integration/spec.ts
+./cypress/integration/spec.ts
+[tsl] ERROR in /Users/taylor/Dev/Minimally-Reproducible/cypress-typescript-custom-commands/cypress/integration/spec.ts(5,6)
+      TS2339: Property 'customCommand' does not exist on type 'cy & EventEmitter'.
